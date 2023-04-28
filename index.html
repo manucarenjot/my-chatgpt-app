@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vue Chat</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+<div id="app">
+    <h1>Vue Chat</h1>
+    <ul>
+        <li v-for="message in messages.reverse()" :key="message.id">{{ message.text }}</li>
+    </ul>
+    <form @submit.prevent="sendMessage">
+        <input type="text" v-model="newMessage">
+        <button type="submit">Send</button>
+    </form>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
